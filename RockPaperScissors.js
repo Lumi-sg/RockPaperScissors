@@ -1,14 +1,18 @@
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
-game();
 
 
-function getPlayerChoice() {
-	let playerInput = prompt("Type Rock, Paper, or Scissors");
-	console.log("Player picks: " + playerInput.toLowerCase());
-	return playerInput.toLowerCase();
-}
+
+
+
+game(); //start game
+
+// function getPlayerChoice() {
+// 	let playerInput = prompt("Type Rock, Paper, or Scissors");
+// 	console.log("Player picks: " + playerInput.toLowerCase());
+// 	return playerInput.toLowerCase();
+// }
 
 function getComputerChoice() {
 	let options = ["Rock", "Paper", "Scissors"];
