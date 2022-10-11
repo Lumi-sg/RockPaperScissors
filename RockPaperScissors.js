@@ -1,8 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
-
 game();
+
 
 function getPlayerChoice() {
 	let playerInput = prompt("Type Rock, Paper, or Scissors");
