@@ -1,5 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
+let ties = 0;
 
 //BUTTON STUFF
 const buttons = document.querySelectorAll("input");
@@ -51,21 +52,25 @@ function playRound(playerSelection) {
 			"<br><br>Player score: " +
 			playerScore +
 			"<br>Computer score: " +
-			computerScore;
-
+			computerScore +
+			"<br>Ties: " +
+			ties;
 		if (playerScore == 5) {
 			result += "<br><br>You won the game!";
 			document.body.appendChild(restartBTN);
 			disableButtons();
 		}
-	} else if (playerSelection == computerSelection) {
+	} else if (playerSelection === computerSelection) {
+		ties++;
 		result =
-			"It's a tie. You both chose " +
+			"It's a tie! You both chose " +
 			playerSelection +
 			"<br><br>Player score: " +
 			playerScore +
 			"<br>Computer score: " +
-			computerScore;
+			computerScore +
+			"<br>Ties: " +
+			ties;
 	} else {
 		computerScore += 1;
 		result =
@@ -76,7 +81,9 @@ function playRound(playerSelection) {
 			"<br><br>Player score: " +
 			playerScore +
 			"<br>Computer score: " +
-			computerScore;
+			computerScore +
+			"<br>Ties: " +
+			ties;
 
 		if (computerScore == 5) {
 			result += "<br><br>You lost the game!";
