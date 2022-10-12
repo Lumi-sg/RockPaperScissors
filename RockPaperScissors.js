@@ -49,6 +49,7 @@ function playRound(playerSelection) {
 			playerSelection +
 			" beats " +
 			computerSelection +
+			"." +
 			"<br><br>Player score: " +
 			playerScore +
 			"<br>Computer score: " +
@@ -65,6 +66,7 @@ function playRound(playerSelection) {
 		result =
 			"It's a tie!<br><br> You both chose " +
 			playerSelection +
+			"." +
 			"<br><br>Player score: " +
 			playerScore +
 			"<br>Computer score: " +
@@ -78,6 +80,7 @@ function playRound(playerSelection) {
 			computerSelection +
 			" beats " +
 			playerSelection +
+			"." +
 			"<br><br>Player score: " +
 			playerScore +
 			"<br>Computer score: " +
