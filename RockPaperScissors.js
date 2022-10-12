@@ -45,7 +45,7 @@ function playRound(playerSelection) {
 	) {
 		playerScore += 1;
 		result =
-			"You win! " +
+			"You win!<br><br>" +
 			playerSelection +
 			" beats " +
 			computerSelection +
@@ -63,7 +63,7 @@ function playRound(playerSelection) {
 	} else if (playerSelection === computerSelection) {
 		ties++;
 		result =
-			"It's a tie! You both chose " +
+			"It's a tie!<br><br> You both chose " +
 			playerSelection +
 			"<br><br>Player score: " +
 			playerScore +
@@ -74,7 +74,7 @@ function playRound(playerSelection) {
 	} else {
 		computerScore += 1;
 		result =
-			"You lose! " +
+			"You lose!<br><br> " +
 			computerSelection +
 			" beats " +
 			playerSelection +
