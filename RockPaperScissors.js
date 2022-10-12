@@ -25,12 +25,7 @@ function computerChoice() {
 function disableButtons() {
 	buttons.forEach((elem) => {
 		elem.disabled = true;
-	});
-}
-
-function enableButtons() {
-	buttons.forEach((elem) => {
-		elem.disabled = false;
+		elem.hidden = true;
 	});
 }
 
