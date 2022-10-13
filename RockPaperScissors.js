@@ -17,7 +17,7 @@ restartBTN.onclick = function () {
 	window.location.reload();
 };
 
-function computerChoice() {
+function getComputerChoice() {
 	let options = ["rock", "paper", "scissors"];
 	return options[Math.floor(Math.random() * options.length)];
 }
@@ -30,7 +30,7 @@ function disableButtons() {
 }
 
 function playRound(playerSelection) {
-	let computerSelection = computerChoice();
+	let computerSelection = getComputerChoice();
 	let result = "";
 
 	if (
@@ -41,9 +41,9 @@ function playRound(playerSelection) {
 		playerScore += 1;
 		result =
 			"You win!<br><br>" +
-			playerSelection +
+			playerSelection.toUpperCase() +
 			" beats " +
-			computerSelection +
+			computerSelection.toUpperCase() +
 			"." +
 			"<br><br>Player score: " +
 			playerScore +
@@ -60,7 +60,7 @@ function playRound(playerSelection) {
 		ties++;
 		result =
 			"It's a tie!<br><br> You both chose " +
-			playerSelection +
+			playerSelection.toUpperCase() +
 			"." +
 			"<br><br>Player score: " +
 			playerScore +
@@ -72,9 +72,9 @@ function playRound(playerSelection) {
 		computerScore += 1;
 		result =
 			"You lose!<br><br> " +
-			computerSelection +
+			computerSelection.toUpperCase() +
 			" beats " +
-			playerSelection +
+			playerSelection.toUpperCase() +
 			"." +
 			"<br><br>Player score: " +
 			playerScore +
