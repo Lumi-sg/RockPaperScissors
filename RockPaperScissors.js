@@ -12,6 +12,7 @@ buttons.forEach((button) => {
 	});
 });
 
+//TOO LAZY TO FIGURE OUT HOW TO DO THIS IN A BETTER WAY SORRY!
 restartBTN.innerHTML = "Restart the game?";
 restartBTN.onclick = function () {
 	window.location.reload();
@@ -25,7 +26,7 @@ function getComputerChoice() {
 function disableButtons() {
 	buttons.forEach((element) => {
 		element.disabled = true;
-		element.hidden = true;
+		element.style.display = "none";
 	});
 }
 
@@ -72,9 +73,9 @@ function playRound(playerSelection) {
 		computerScore += 1;
 		result =
 			"You lose!<br><br> " +
-			computerSelection.toUpperCase() +
-			" beats " +
 			playerSelection.toUpperCase() +
+			" loses to " +
+			computerSelection.toUpperCase() +
 			"." +
 			"<br><br>Player score: " +
 			playerScore +

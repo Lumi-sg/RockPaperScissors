@@ -5,10 +5,11 @@ body {
 
 .rpsOptions {
 	margin-bottom: 20px;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	display: flex;
 	column-gap: 0.5rem;
 }
+
 
 .button {
 	border: none;
