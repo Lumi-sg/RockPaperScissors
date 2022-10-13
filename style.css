@@ -11,13 +11,20 @@ body {
 .button {
 	border: none;
 	color: white;
-	padding: 10px 15px;
+	padding: 10px 10px;
+	border-radius: 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
+	transition: 100ms;
+	width: 5rem;
+}
+
+.button:hover {
+	transform: scale(1.2);
 }
 
 .rockButton {
@@ -31,4 +38,8 @@ body {
 
 .scissorsButton {
 	background-color: rgb(68, 64, 64);
+}
+
+.result {
+	font-size: 5rem;
 }
