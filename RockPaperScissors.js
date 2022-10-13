@@ -23,9 +23,9 @@ function getComputerChoice() {
 }
 
 function disableButtons() {
-	buttons.forEach((elem) => {
-		elem.disabled = true;
-		elem.hidden = true;
+	buttons.forEach((element) => {
+		element.disabled = true;
+		element.hidden = true;
 	});
 }
 
