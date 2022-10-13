@@ -6,6 +6,8 @@ body {
 .rpsOptions {
 	margin-bottom: 20px;
 	padding: 10px 20px;
+	display: flex;
+	column-gap: 0.5rem;
 }
 
 .button {
