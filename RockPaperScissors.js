@@ -22,7 +22,7 @@ function getComputerChoice() {
 	let options = ["rock", "paper", "scissors"];
 	return options[Math.floor(Math.random() * options.length)];
 }
-
+//AFTER GAME ENDS, BUTTONS ARE DISABLED AND HIDDEN
 function disableButtons() {
 	buttons.forEach((element) => {
 		element.disabled = true;
@@ -35,9 +35,11 @@ function playRound(playerSelection) {
 	let result = "";
 
 	if (
-		(playerSelection == "rock" && computerSelection == "scissors") ||
-		(playerSelection == "scissors" && computerSelection == "paper") ||
-		(playerSelection == "paper" && computerSelection == "rock")
+		(playerSelection.toLowerCase() == "rock" &&
+			computerSelection == "scissors") ||
+		(playerSelection.toLowerCase() == "scissors" &&
+			computerSelection == "paper") ||
+		(playerSelection.toLowerCase() == "paper" && computerSelection == "rock")
 	) {
 		playerScore += 1;
 		result =
@@ -57,7 +59,7 @@ function playRound(playerSelection) {
 			document.body.appendChild(restartBTN);
 			disableButtons();
 		}
-	} else if (playerSelection === computerSelection) {
+	} else if (playerSelection.toLowerCase() === computerSelection) {
 		ties++;
 		result =
 			"It's a tie!<br><br> You both chose " +
