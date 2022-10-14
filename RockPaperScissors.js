@@ -13,7 +13,7 @@ buttons.forEach((button) => {
 });
 
 //TOO LAZY TO FIGURE OUT HOW TO DO THIS IN A BETTER WAY SORRY!
-restartBTN.innerHTML = "Restart the game?";
+restartBTN.innerHTML = "▶️";
 restartBTN.onclick = function () {
 	window.location.reload();
 };
