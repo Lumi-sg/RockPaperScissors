@@ -19,7 +19,7 @@ restartBTN.onclick = function () {
 };
 
 function getComputerChoice() {
-	let options = ["rock", "paper", "scissors"];
+	let options = ["Rock", "Paper", "Scissors"];
 	return options[Math.floor(Math.random() * options.length)];
 }
 //AFTER GAME ENDS, BUTTONS ARE DISABLED AND HIDDEN
@@ -35,18 +35,16 @@ function playRound(playerSelection) {
 	let result = "";
 
 	if (
-		(playerSelection.toLowerCase() == "rock" &&
-			computerSelection == "scissors") ||
-		(playerSelection.toLowerCase() == "scissors" &&
-			computerSelection == "paper") ||
-		(playerSelection.toLowerCase() == "paper" && computerSelection == "rock")
+		(playerSelection == "Rock" && computerSelection == "Scissors") ||
+		(playerSelection == "Scissors" && computerSelection == "Paper") ||
+		(playerSelection == "Paper" && computerSelection == "Rock")
 	) {
 		playerScore += 1;
 		result =
 			"You win!<br><br>" +
-			playerSelection.toUpperCase() +
+			playerSelection +
 			" beats " +
-			computerSelection.toUpperCase() +
+			computerSelection +
 			"." +
 			"<br><br>Player score: " +
 			playerScore +
@@ -59,11 +57,11 @@ function playRound(playerSelection) {
 			document.body.appendChild(restartBTN);
 			disableButtons();
 		}
-	} else if (playerSelection.toLowerCase() === computerSelection) {
+	} else if (playerSelection === computerSelection) {
 		ties++;
 		result =
 			"It's a tie!<br><br> You both chose " +
-			playerSelection.toUpperCase() +
+			playerSelection +
 			"." +
 			"<br><br>Player score: " +
 			playerScore +
@@ -75,9 +73,9 @@ function playRound(playerSelection) {
 		computerScore += 1;
 		result =
 			"You lose!<br><br> " +
-			playerSelection.toUpperCase() +
+			playerSelection +
 			" loses to " +
-			computerSelection.toUpperCase() +
+			computerSelection +
 			"." +
 			"<br><br>Player score: " +
 			playerScore +
