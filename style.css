@@ -22,8 +22,8 @@ body {
 	cursor: pointer;
 	transition: 100ms;
 	font-weight: bold;
-	width: 200px;
-	height: 75px;
+	width: 150px;
+	height: 60px;
 }
 
 .button:hover {
