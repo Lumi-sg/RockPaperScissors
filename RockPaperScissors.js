@@ -4,7 +4,7 @@ let ties = 0;
 
 //BUTTON STUFF
 const buttons = document.querySelectorAll("input");
-const restartBTN = document.createElement("button");
+const refreshButton = document.querySelector(".restart");
 
 buttons.forEach((button) => {
 	button.addEventListener("click", function () {
@@ -12,22 +12,27 @@ buttons.forEach((button) => {
 	});
 });
 
-//TOO LAZY TO FIGURE OUT HOW TO DO THIS IN A BETTER WAY SORRY!
-restartBTN.innerHTML = "▶️";
-restartBTN.onclick = function () {
-	window.location.reload();
-};
-
-function getComputerChoice() {
-	let options = ["Rock", "Paper", "Scissors"];
-	return options[Math.floor(Math.random() * options.length)];
-}
 //AFTER GAME ENDS, BUTTONS ARE DISABLED AND HIDDEN
 function disableButtons() {
 	buttons.forEach((element) => {
 		element.disabled = true;
 		element.style.display = "none";
 	});
+}
+
+function enableRestartButton() {
+	refreshButton.style.display = "block";
+}
+
+//TOO LAZY TO FIGURE OUT HOW TO DO THIS IN A BETTER WAY SORRY!
+const refreshPage = () => {
+	location.reload();
+};
+refreshButton.addEventListener("click", refreshPage);
+
+function getComputerChoice() {
+	let options = ["Rock", "Paper", "Scissors"];
+	return options[Math.floor(Math.random() * options.length)];
 }
 
 function playRound(playerSelection) {
@@ -54,8 +59,8 @@ function playRound(playerSelection) {
 			ties;
 		if (playerScore == 5) {
 			result += "<br><br>You won the game!";
-			document.body.appendChild(restartBTN);
 			disableButtons();
+			enableRestartButton();
 		}
 	} else if (playerSelection === computerSelection) {
 		ties++;
@@ -84,10 +89,10 @@ function playRound(playerSelection) {
 			"<br>Ties: " +
 			ties;
 
-		if (computerScore == 5) {
+		if (computerScore === 5) {
 			result += "<br><br>You lost the game!";
-			document.body.appendChild(restartBTN);
 			disableButtons();
+			enableRestartButton();
 		}
 	}
 	document.getElementById("result").innerHTML = result;
