@@ -55,20 +55,17 @@ body {
 	justify-content: center;
 }
 
-
 .restart {
 	background: none;
 	border: none;
 	outline: none;
 	font-size: 5rem;
 	cursor: pointer;
-	transition: 100ms;
 	margin-right: 35px;
 	display: none;
+	transition: 100ms;
 }
 
-
-.playAgainButton:hover {
+.restart:hover {
 	transform: scale(1.2);
-
 }

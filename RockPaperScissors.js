@@ -24,6 +24,14 @@ function enableRestartButton() {
 	refreshButton.style.display = "block";
 }
 
+function renamePageTitle() {
+	if (playerScore == 5) {
+		document.title = "You won!";
+	} else {
+		document.title = "You lost!";
+	}
+}
+
 //TOO LAZY TO FIGURE OUT HOW TO DO THIS IN A BETTER WAY SORRY!
 const refreshPage = () => {
 	location.reload();
@@ -61,6 +69,7 @@ function playRound(playerSelection) {
 			result += "<br><br>You won the game!";
 			disableButtons();
 			enableRestartButton();
+			renamePageTitle();
 		}
 	} else if (playerSelection === computerSelection) {
 		ties++;
@@ -93,6 +102,7 @@ function playRound(playerSelection) {
 			result += "<br><br>You lost the game!";
 			disableButtons();
 			enableRestartButton();
+			renamePageTitle();
 		}
 	}
 	document.getElementById("result").innerHTML = result;
