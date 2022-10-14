@@ -5,25 +5,25 @@ body {
 }
 
 .rpsOptions {
+	display: flex;
+	justify-content: center;
 	margin-top: 50px;
 	margin-bottom: 20px;
 	padding: 10px 10px;
-	display: flex;
 	column-gap: 1.3rem;
-	justify-content: center;
 }
 
 .button {
 	border: none;
 	color: white;
-	padding: 32px 70px;
 	border-radius: 10px;
 	font-size: 20px;
 	margin: 4px 2px;
 	cursor: pointer;
 	transition: 100ms;
 	font-weight: bold;
-	text-align: center;
+	width: 200px;
+	height: 75px;
 }
 
 .button:hover {
